@@ -301,7 +301,9 @@ btVector3 btConvexShape::localGetSupportVertexWithoutMarginNonVirtual(const btVe
 
 	// should never reach here
 	btAssert(0);
+#ifndef _MSC_VER
 	return btVector3(btScalar(0.0f), btScalar(0.0f), btScalar(0.0f));
+#endif
 }
 
 btVector3 btConvexShape::localGetSupportVertexNonVirtual(const btVector3& localDir) const
@@ -368,7 +370,9 @@ btScalar btConvexShape::getMarginNonVirtual() const
 
 	// should never reach here
 	btAssert(0);
+#ifndef _MSC_VER
 	return btScalar(0.0f);
+#endif
 }
 #ifndef __SPU__
 void btConvexShape::getAabbNonVirtual(const btTransform& t, btVector3& aabbMin, btVector3& aabbMax) const
