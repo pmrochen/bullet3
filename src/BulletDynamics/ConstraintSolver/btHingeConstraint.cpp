@@ -306,10 +306,8 @@ static btScalar btShortestAngleUpdate(btScalar accAngle, btScalar curAngle)
 
 	if (btFabs(result) > tol)
 		return curAngle;
-	else
-		return accAngle + result;
 
-	return curAngle;
+	return accAngle + result;
 }
 
 btScalar btHingeAccumulatedAngleConstraint::getAccumulatedHingeAngle()
