@@ -206,7 +206,7 @@ public:
 
 	virtual const btVector3& getLocalScaling() const;
 
-	void getVertex(int x, int y, btVector3& vertex) const;
+	virtual void getVertex(int x, int y, btVector3& vertex) const;
 
 	void performRaycast(btTriangleCallback * callback, const btVector3& raySource, const btVector3& rayTarget) const;
 
