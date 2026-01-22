@@ -185,13 +185,13 @@ int MultiBodyTree::MultiBodyImpl::generateIndexSets()
 			if (-1 == parent)
 			{
 				// multiple bodies are directly linked to the environment, ie, not a single root
-				bt_id_error_message("building index sets parent(%zu)= -1 (multiple roots)\n", child);
+				bt_id_error_message("building index sets parent(%u)= -1 (multiple roots)\n", child);
 			}
 			else
 			{
 				// should never happen
 				bt_id_error_message(
-					"building index sets. parent_index[%zu]= %d, but m_parent_index.size()= %d\n",
+					"building index sets. parent_index[%u]= %d, but m_parent_index.size()= %d\n",
 					child, parent, static_cast<int>(m_parent_index.size()));
 			}
 			return -1;
